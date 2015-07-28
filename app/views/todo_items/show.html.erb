@@ -1,3 +1,5 @@
+<h1>All Items</h1>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -15,5 +17,5 @@
   <%= @todo_item.hidden %>
 </p>
 
-<%= link_to 'Edit', edit_todo_item_path(@todo_item) %> |
-<%= link_to 'Back', todo_items_path %>
+<button type='button' class='showbtn'><%= link_to 'Edit', edit_todo_item_path(@todo_item) %></button> |
+<button type='button' class='showbtnback'><%= link_to 'Back', todo_items_path %></button>

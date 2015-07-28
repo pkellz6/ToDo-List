@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Todo Items</h1>
+<h1>To-Do Items</h1>
 
 <table>
   <thead>
@@ -18,14 +18,13 @@
         <td><%= todo_item.description %></td>
         <td><%= todo_item.starred %></td>
         <td><%= todo_item.hidden %></td>
-        <td><%= link_to 'Show', todo_item %></td>
-        <td><%= link_to 'Edit', edit_todo_item_path(todo_item) %></td>
-        <td><%= link_to 'Destroy', todo_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><button type='button' class='btn'><%= link_to 'Show', todo_item %></button></td>
+        <td><button type='button' class='btn'><%= link_to 'Edit', edit_todo_item_path(todo_item) %></button></td>
+        <td><button type='button' class='btn'><%= link_to 'Destroy', todo_item, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Todo item', new_todo_item_path %>
+<button type='button' class='newbtn'><%= link_to 'New To-Do item', new_todo_item_path %></button>
